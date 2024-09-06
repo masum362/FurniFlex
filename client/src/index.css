@@ -62,5 +62,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Barlow", sans-serif;
+
+  }
+
+  p {
+    @apply text-normalText;
+    font-weight: 500;
   }
 }
