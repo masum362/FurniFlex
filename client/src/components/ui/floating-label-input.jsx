@@ -7,8 +7,7 @@ import { Label } from '@/components/ui/label';
 const FloatingInput =({ className, ...props }, ref) => {
       return <Input placeholder=" " className={cn('peer', className)} ref={ref} {...props} />;
     }
-
-  FloatingInput.displayName = 'FloatingInput';
+ FloatingInput.displayName = 'FloatingInput';
 
 const FloatingLabel =(({ className, ...props }, ref) => {
   return (
