@@ -3,17 +3,12 @@ import loginBanner from '@/assets/chair.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
-import { IoLogoGithub, IoLogoGoogle } from 'react-icons/io5'
 // import { AuthContext } from '../../context/AuthProvider'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from '@/components/ui/button'
-// import useAxiosSecure from '../../hooks/useAxiosSecure'
-import { FloatingInput, FloatingLabel, FloatingLabelInput } from '@/components/ui/floating-label-input';
 import CustomInput from '@/components/customInput/CustomInput'
-import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
-
 import googleIcon from '@/assets/google-icon.png'
 import appleIcon from '@/assets/apple-icon.png'
 import logo from '@/assets/icon.png'

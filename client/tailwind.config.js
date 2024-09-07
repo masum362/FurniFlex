@@ -15,6 +15,7 @@ export default {
   		colors: {
         theme:"#1E99F5",
         normalText: "#707070",
+		secondary:"#F2F2F2",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
