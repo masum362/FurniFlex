@@ -3,7 +3,7 @@ import loginBanner from '@/assets/chair.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
-// import { AuthContext } from '../../context/AuthProvider'
+import { AuthContext } from '@/context/AuthProvider'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from '@/components/ui/button'
@@ -17,94 +17,75 @@ import logo from '@/assets/icon.png'
 const SignUp = () => {
 
     const [isOpen, setIsOpen] = useState(false)
-    // // const { LoginUser, loginWithGithub, loginWithGogle } = useContext(AuthContext);
+    const { RegisterUser, loginWithGithub, loginWithGogle,updateUser } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm()
-    // const navigate = useNavigate();
-    // const location = useLocation();
+    const navigate = useNavigate();
+    const location = useLocation();
 
 
-    // const handleOnSubmit = ({ email, password }) => {
-    //     console.log(email, password)
-    //     LoginUser(email, password).then(res => {
-    //         console.log("user logged in successfully")
-    //         toast.success('Successfully looged in user', {
-    //             position: "top-right",
-    //             autoClose: 5000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "light",
-    //             transition: Bounce,
-    //         })
-    //         setTimeout(() => {
-    //             navigate(location.state ? location.state : "/");
-    //         }, 2000);
-    //     }).catch(err => {
-    //         toast.error(err.message, {
-    //             position: "top-right",
-    //             autoClose: 5000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "light",
-    //             transition: Bounce,
-    //         })
-    //     })
-    // }
+    const handleOnSubmit = ({ email, password, firstName, lastName }) => {
+        console.log(email, password)
+        RegisterUser(email, password).then(res => {
+            const displayName = firstName + " " + lastName
+            updateUser(res.user, displayName).then(res=>{
+                console.log("user register successfully")
+                toast.success('Successfully register user', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                })
+                setTimeout(() => {
+                    navigate(location.state ? location.state : "/products");
+                }, 2000);
+            }).catch(err =>console.log(err));
 
-
-    // const handleGogleLogin = () => {
-    //     loginWithGogle().then(res => {
-    //         toast.success('Successfully looged in user', {
-    //             position: "top-right",
-    //             autoClose: 5000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "light",
-    //             transition: Bounce,
-    //         })
-    //         setTimeout(() => {
-    //             navigate(location.state ? location.state : "/")
-    //         }, 2000);
-    //     }).catch(err => console.log(err));
-    // }
-    // const handleGithubLogin = () => {
-    //     loginWithGithub().then(res => {
-    //         console.log("user logged in successfully")
-    //         toast.success('Successfully looged in user', {
-    //             position: "top-right",
-    //             autoClose: 5000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "light",
-    //             transition: Bounce,
-    //         })
-    //         setTimeout(() => {
-    //             navigate(location.state ? location.state : "/")
-    //         }, 2000);
-    //     }).catch(err => console.log(err));
-    // }
-
-    const handleFormSubmit = (data) => {
-        console.log(data);
+           
+        }).catch(err => {
+            toast.error(err.message, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            })
+        })
     }
 
-    console.log(errors);
+
+    const handleGogleLogin = () => {
+        loginWithGogle().then(res => {
+            toast.success('Successfully looged in user', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            })
+            setTimeout(() => {
+                navigate(location.state ? location.state : "/")
+            }, 2000);
+        }).catch(err => console.log(err));
+    }
+
     return (
         <div className='flex flex-col md:flex-row w-full  min-h-screen '>
             <ToastContainer />
             <div className='w-full lg:w-3/5 bg-[#fff] dark:bg-[#000] p-2 flex flex-col lg:flex-row items-center justify-center '>
-                <form onSubmit={handleSubmit(handleFormSubmit)} className='w-full p-2 py-12 md:px-4 rounded-l-lg  md:max-w-md lg:max-w-lg 2xl:max-w-2xl space-y-4 bg-[#FAFAFA]'>
+                <form onSubmit={handleSubmit(handleOnSubmit)} className='w-full p-2 py-12 md:px-4 rounded-l-lg  md:max-w-md lg:max-w-lg 2xl:max-w-2xl space-y-4 bg-[#FAFAFA]'>
                     <div className='flex flex-col text-center'>
                         <span className='text-3xl font-semibold pb-4'>Welcome To</span>
                         <h1 className='text-3xl font-bold '>Furni<span className='text-theme'>Flex</span></h1>
@@ -175,7 +156,7 @@ const SignUp = () => {
                         </div>
 
                         <div className='flex flex-col sm:flex-row gap-2 items-center justify-between py-4'>
-                            <Button variant={"outline"} className='flex items-center justify-center gap-2 sm:w-full h-12 px-8 text-sm'>
+                            <Button onClick={handleGogleLogin} variant={"outline"} className='flex items-center justify-center gap-2 sm:w-full h-12 px-8 text-sm'>
                                 <span ><img src={googleIcon} alt='gogle icon' /></span><span >Sign in with gogle</span>
                             </Button>
                             <Button variant={"outline"} className='flex items-center sm:w-full justify-center gap-2 h-12 px-8 text-sm'>

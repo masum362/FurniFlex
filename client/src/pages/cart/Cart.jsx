@@ -9,13 +9,13 @@ const Cart = () => {
     return (
         <div>
 
-            <div className='grid grid-cols-4 p-8'>
+            <div className='grid grid-cols-1 md:grid-cols-4 p-8'>
 
                 <div className=' col-span-3 space-y-4 '>
                     <h1 className='text-2xl font-semibold py-2'>An overview of your order</h1>
                     <div className='flex flex-col bg-[#FAFAFA] border-b'>
                         <div className='flex justify-between p-4  '>
-                            <div className='flex items-center gap-4'>
+                            <div className='flex flex-col md:flex-row items-start md:items-center gap-4'>
                                 <span className='border border-secondary bg-white flex items-center'>
                                     <p className='p-2 font-bold cursor-pointer '>-</p>
                                     <p className='p-2 font-bold text-black '>1</p>
