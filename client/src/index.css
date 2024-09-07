@@ -68,6 +68,6 @@
 
   p {
     @apply text-normalText;
-    font-weight: 500;
+    font-weight: 400;
   }
 }

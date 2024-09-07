@@ -42,7 +42,7 @@ const Footer = () => {
 
       <div className=' pt-4 flex items-start lg:items-center justify-center flex-col gap-6 border-t '>
 
-        <div className='flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-4'>
+        <div className='flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-4 py-2'>
           <div className='flex items-start lg:items-center justify-center gap-2'>
             <a href='https://www.facebook.com/md.masum.ahmed.mk'><FiFacebook  /></a>
             <a href='https://www.instagram.com/masum362ig'><FaInstagram  /></a>

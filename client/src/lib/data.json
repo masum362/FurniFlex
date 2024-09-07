@@ -1,0 +1,122 @@
+[
+    {
+        "id":1,
+        "image": "./products/product1.png",
+        "title":"Recliner Chair Wood",
+        "description":"It has a backrest that can be tilted back, and often a footrest extended ",
+        "price":{
+            "mrp":350,
+            "cost":299
+        }
+    },
+    {
+        "id":2,
+        "image": "./products/product2.png",
+        "title":"Timber Ride Padded",
+        "description":"High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+        "price":{
+            "mrp":75,
+            "cost":59
+        }
+    },
+    {
+        "id":3,
+        "image": "./products/product3.png",
+        "title":"Colored Wooden Chair",
+        "description":"It has a backrest that can be tilted back, and often a footrest extended",
+        "price":{
+            "mrp":350,
+            "cost":299
+        }
+    },
+    {
+        "id":4,
+        "image": "./products/product4.png",
+        "title":"Blank Bamboo Wicker",
+        "description":"Lightweight, easy to clean, sturdy, safe and stable. Non-slip legs",
+        "price":{
+            "mrp":350,
+            "cost":299
+        }
+    },
+    {
+        "id":5,
+        "image": "./products/product5.png",
+        "title":"Isolated Wooden Rock",
+        "description":"It has a backrest that can be tilted back, and often a footrest extended",
+        "price":{
+            "mrp":400,
+            "cost":165
+        }
+    },
+    {
+        "id":6,
+        "image": "./products/product6.png",
+        "title":"Minimal Empty Rocking",
+        "description":"A seat, especially for one person, usually having four legs for support. ",
+        "price":{
+            "mrp":350,
+            "cost":299
+        }
+    },
+    {
+        "id":7,
+        "image": "./products/product1.png",
+        "title":"Recliner Chair Wood",
+        "description":"It has a backrest that can be tilted back, and often a footrest extended ",
+        "price":{
+            "mrp":350,
+            "cost":299
+        }
+    },
+    {
+        "id":8,
+        "image": "./products/product1.png",
+        "title":"Timber Ride Padded",
+        "description":"High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+        "price":{
+            "mrp":75,
+            "cost":59
+        }
+    },
+    {
+        "id":9,
+        "image": "./products/product4.png",
+        "title":"Colored Wooden Chair",
+        "description":"It has a backrest that can be tilted back, and often a footrest extended",
+        "price":{
+            "mrp":350,
+            "cost":299
+        }
+    },
+    {
+        "id":10,
+        "image": "./products/product4.png",
+        "title":"Blank Bamboo Wicker",
+        "description":"Lightweight, easy to clean, sturdy, safe and stable. Non-slip legs",
+        "price":{
+            "mrp":350,
+            "cost":299
+        }
+    },
+    {
+        "id":11,
+        "image": "./products/product6.png",
+        "title":"Isolated Wooden Rock",
+        "description":"It has a backrest that can be tilted back, and often a footrest extended",
+        "price":{
+            "mrp":400,
+            "cost":165
+        }
+    },
+    {
+        "id":12,
+        "image": "./products/product3.png",
+        "title":"Minimal Empty Rocking",
+        "description":"A seat, especially for one person, usually having four legs for support. ",
+        "price":{
+            "mrp":350,
+            "cost":299
+        }
+    }
+]

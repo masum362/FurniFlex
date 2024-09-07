@@ -10,11 +10,11 @@ const Navbar = () => {
         <img src={logo} alt="FurniFlex" />
       </div>
       <ul className='flex items-center justify-center gap-2 lg:gap-4'>
-        <li><NavLink to={"/"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Home</NavLink></li>
-        <li><NavLink to={"/products"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Products</NavLink></li>
-        <li><NavLink to={"/categories"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Categories</NavLink></li>
-        <li><NavLink to={"/custom"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Custom</NavLink></li>
-        <li><NavLink to={"/blog"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Blog</NavLink></li>
+        <li><NavLink to={"/"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold px-4" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Home</NavLink></li>
+        <li><NavLink to={"/products"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold px-4" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Products</NavLink></li>
+        <li><NavLink to={"/categories"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold px-4" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Categories</NavLink></li>
+        <li><NavLink to={"/custom"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold px-4" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Custom</NavLink></li>
+        <li><NavLink to={"/blog"} className={({isActive}) => `${isActive ? "bg-secondary hover:bg-secondary/50 font-semibold px-4" : " "} p-2 rounded-lg transition-all duration-150 font-medium`}>Blog</NavLink></li>
       </ul>
       <div className='flex items-center justify-center gap-4'>
         <IoBagOutline  size={30} />
